@@ -8,7 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Input() title: string;
   @Input() subTitle: string;
-  @Input isAuth: boolean;
+  @Input() isAuth: boolean;
 
   constructor() { }
 
