@@ -3,19 +3,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
+import { NgrxModule } from './ngrx.module';
+import { LoginModule } from './login/login.module';
+import { HeaderModule } from './header/header.module';
+import { HomeModule } from './home/home.module';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    HeaderComponent
-  ],
+  declarations: [AppComponent],
   imports: [
-    BrowserModule, CommonModule
+    BrowserModule,
+    CommonModule,
+    NgrxModule,
+    LoginModule,
+    HeaderModule,
+    HomeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

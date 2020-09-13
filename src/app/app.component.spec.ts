@@ -1,31 +1,49 @@
-import { TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { provideMockStore, MockStore } from '@ngrx/store/testing';
+
 import { AppComponent } from './app.component';
+import { MemoizedSelector } from '@ngrx/store';
+import { AuthState } from './store/auth-state.model';
+import { getIsAuth } from './store';
 
 describe('AppComponent', () => {
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [
-        AppComponent
-      ],
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+  let mockStore: MockStore;
+  let mockGetIsAuthSelector: MemoizedSelector<AuthState, boolean>;
+
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      providers: [provideMockStore()],
+      declarations: [AppComponent],
     }).compileComponents();
-  });
+  }));
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
-
-  it(`should have as title 'class-app'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('class-app');
-  });
-
-  it('should render title', () => {
-    const fixture = TestBed.createComponent(AppComponent);
+  beforeEach(() => {
+    fixture = TestBed.createComponent(AppComponent);
+    mockStore = TestBed.inject(MockStore);
+    mockGetIsAuthSelector = mockStore.overrideSelector(getIsAuth, false);
+    component = fixture.componentInstance;
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('class-app app is running!');
+  });
+
+  it('should should return false if the user is not logged in', (done) => {
+    mockGetIsAuthSelector.setResult(false);
+    mockStore.refreshState();
+    fixture.detectChanges();
+    component.isAuth$.subscribe((isAuth) => {
+      expect(isAuth).toBeFalsy();
+      done();
+    });
+  });
+
+  it('should should return true if the user is not logged in', (done) => {
+    mockGetIsAuthSelector.setResult(true);
+    mockStore.refreshState();
+    fixture.detectChanges();
+    component.isAuth$.subscribe((isAuth) => {
+      expect(isAuth).toBeTruthy();
+      done();
+    });
   });
 });
