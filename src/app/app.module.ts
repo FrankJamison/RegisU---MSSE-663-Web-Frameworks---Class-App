@@ -20,7 +20,7 @@ import { HomeModule } from './home/home.module';
     HeaderModule,
     HomeModule,
   ],
-  providers: [],
+  providers: [ HttpClientModule ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

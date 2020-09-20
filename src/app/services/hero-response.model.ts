@@ -1,6 +1,6 @@
 export interface HeroResponse {
-  _id: string;
-  ranking: string[];
+  id: number;
+  ranking: string;
   name: string;
   specialty: string;
   rent: number;

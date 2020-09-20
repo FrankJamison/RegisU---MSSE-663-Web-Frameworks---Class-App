@@ -10,7 +10,7 @@ describe('Auth Reducer', () => {
       ...AUTH_INITIAL_MOCK_STATE,
       token: AUTH_INITIAL_MOCK_STATE.token,
       isAuth: true,
-      loading: false,
+      loading: true,
     };
     const actual = authReducer(AUTH_INITIAL_MOCK_STATE, action);
 
