@@ -4,13 +4,13 @@ export interface AuthResponse {
 }
 
 export interface UserResponse {
-  _id: string;
+  id: string;
   username: string;
   password: string;
   tokens: Token[];
 }
 
 interface Token {
-  _id: string;
+  id: string;
   token: string;
 }

@@ -2,12 +2,12 @@ import { UserState } from './models/user-state.model';
 
 export const USER_INITIAL_MOCK_STATE: UserState = {
   user: {
-    _id: 'userId',
+    id: 'userId',
     username: 'admin',
     password: 'password',
     tokens: [
       {
-        _id: 'tokenId',
+        id: 'tokenId',
         token: 'token',
       },
     ],

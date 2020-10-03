@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeComponent } from './home.component';
 
-import { HeroTableModule } from '../hero-table/hero-table.module';
+import { HeroTableModule } from '../hero-list/hero-list.module';
 
 const components = [HomeComponent];
 
