@@ -18,7 +18,7 @@
       <tr *ngFor="let hero of heroes; let id = index">
         <th scope="row">{{ id }}</th>
         <th>
-          <a [routerLink]="['/heroes', hero.id]">
+          <a [routerLink]="['/heroes', hero._id]">
             {{ hero.name }}
           </a>
         </th>
