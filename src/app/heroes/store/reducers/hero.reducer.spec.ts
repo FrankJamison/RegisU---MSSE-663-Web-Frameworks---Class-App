@@ -5,7 +5,7 @@ import { heroReducer } from './hero.reducer';
 
 describe('Auth Reducer', () => {
   it('should starting load heroes on `loadHero`', () => {
-    const action = loadHero({ heroId: HERO_INITIAL_MOCK_STATE.hero.id });
+    const action = loadHero({ heroId: HERO_INITIAL_MOCK_STATE.hero._id });
     const expected: HeroState = {
       ...HERO_INITIAL_MOCK_STATE,
       loading: true,
