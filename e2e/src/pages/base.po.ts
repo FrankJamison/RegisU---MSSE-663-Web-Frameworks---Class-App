@@ -44,4 +44,12 @@ export class BasePage {
     await browser.wait(ExpectedConditions.visibilityOf(currentElement));
     await currentElement.sendKeys(inputValue);
   }
+
+  async clickElement(
+    selector: string
+  ): Promise<void> {
+    const currentElement = element(by.css(selector));
+    await browser.wait(ExpectedConditions.visibilityOf(currentElement));
+    await currentElement.click();
+  }
 }

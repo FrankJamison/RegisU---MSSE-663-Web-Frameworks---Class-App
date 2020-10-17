@@ -54,13 +54,13 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~3.3.0",
     "karma-jasmine-html-reporter": "^1.5.0",
-    "protractor": "5.4.2",
+    "protractor": "^7.0.0",
     "protractor-cucumber-framework": "6.2.0",
     "selenium-webdriver": "3.6.0",
     "shelljs.exec": "^1.1.8",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "typescript": "~3.9.5",
-    "webdriver-manager": "12.1.2"
-  }
+    "typescript": "~3.9.5"
+  },
+  "postinstall": "cd ./node_modules/protractor && npm i webdriver-manager@12.1.6"
 }

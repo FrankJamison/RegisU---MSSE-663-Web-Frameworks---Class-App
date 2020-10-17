@@ -1,5 +1,5 @@
 <div class="container-width-full">
-  <table class="table table-striped" *ngIf="heroes; else loadingHeroes">
+  <table class="table table-striped" id="hero-list" *ngIf="heroes; else loadingHeroes">
     <thead>
       <tr>
         <th scope="col">#</th>
@@ -15,7 +15,7 @@
       <tr *ngFor="let hero of heroes; let id = index">
         <th scope="row">{{ id }}</th>
         <th>
-          <a [routerLink]="['/heroes', hero._id]">
+          <a [routerLink]="['/heroes', hero._id]" id="{{hero.name}}">
             {{ hero.name }}
           </a>
         </th>

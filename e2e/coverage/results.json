@@ -39,11 +39,11 @@
             "line": 5,
             "name": "I navigate to the login page",
             "match": {
-              "location": "e2e/src/steps/auth.steps.ts:6"
+              "location": "e2e/src/steps/auth.steps.ts:9"
             },
             "result": {
               "status": "passed",
-              "duration": 242000000
+              "duration": 911000000
             }
           },
           {
@@ -56,7 +56,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 39000000
+              "duration": 95000000
             }
           },
           {
@@ -67,7 +67,261 @@
             },
             "result": {
               "status": "passed",
-              "duration": 621000000
+              "duration": 1531000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Authentication Feature",
+    "line": 2,
+    "id": "authentication-feature",
+    "tags": [
+      {
+        "name": "@FE",
+        "line": 1
+      },
+      {
+        "name": "@app",
+        "line": 1
+      }
+    ],
+    "uri": "e2e/src/features/auth.feature",
+    "elements": [
+      {
+        "id": "authentication-feature;as-an-unauthenticated-user,-i-can-see-the-app-nav-menu",
+        "keyword": "Scenario",
+        "line": 4,
+        "name": "As an unauthenticated user, I can see the app nav menu",
+        "tags": [
+          {
+            "name": "@FE",
+            "line": 1
+          },
+          {
+            "name": "@app",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 5,
+            "name": "I navigate to the login page",
+            "match": {
+              "location": "e2e/src/steps/auth.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1013000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "I see the authentiction home page",
+            "match": {
+              "location": "e2e/src/steps/auth.steps.ts:15"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 119000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "I enter my credentials",
+            "match": {
+              "location": "e2e/src/steps/auth.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 538000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "I see the heroes list",
+            "match": {
+              "location": "e2e/src/steps/auth.steps.ts:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 725000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1416000000
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "keyword": "Feature",
+    "name": "Heroes",
+    "line": 3,
+    "id": "heroes",
+    "tags": [
+      {
+        "name": "@FE",
+        "line": 1
+      },
+      {
+        "name": "@heroes",
+        "line": 1
+      }
+    ],
+    "uri": "e2e/src/features/heroes.feature",
+    "elements": [
+      {
+        "id": "heroes;as-an-authenticated-user,-i-can-list-of-heroes-on-the-heroes-page",
+        "keyword": "Scenario",
+        "line": 5,
+        "name": "As an authenticated user, I can list of heroes on the heroes page",
+        "tags": [
+          {
+            "name": "@FE",
+            "line": 1
+          },
+          {
+            "name": "@heroes",
+            "line": 1
+          }
+        ],
+        "type": "scenario",
+        "steps": [
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 6,
+            "name": "Heroes: I navigate to the auth page",
+            "match": {
+              "location": "e2e/src/steps/heroes.steps.ts:9"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 938000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 7,
+            "name": "Heroes: I see the authentiction home page",
+            "match": {
+              "location": "e2e/src/steps/heroes.steps.ts:13"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 113000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 8,
+            "name": "Heroes: I enter my credentials",
+            "match": {
+              "location": "e2e/src/steps/heroes.steps.ts:17"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 536000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 9,
+            "name": "Heroes: I see the heroes list",
+            "match": {
+              "location": "e2e/src/steps/heroes.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 735000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 10,
+            "name": "Heroes: I click on the heroes tab",
+            "match": {
+              "location": "e2e/src/steps/heroes.steps.ts:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 148000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "Heroes: I see the heroes list again",
+            "match": {
+              "location": "e2e/src/steps/heroes.steps.ts:31"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 91000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 12,
+            "name": "Hero: Click on hero",
+            "match": {
+              "location": "e2e/src/steps/heroes.steps.ts:35"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 130000000
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 13,
+            "name": "Hero: See hero",
+            "match": {
+              "location": "e2e/src/steps/heroes.steps.ts:39"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 134000000
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "match": {
+              "location": "node_modules/protractor-cucumber-framework/lib/resultsCapturer.js:27"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1528000000
             }
           }
         ]

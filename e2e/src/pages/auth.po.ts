@@ -1,18 +1,16 @@
 import { BasePage } from './base.po';
 
 export class AuthPage extends BasePage {
-  private baseUrl = 'http://localhost:4200';
-  private homePageEl = '#budget';
-  private logoutEl = '#logout';
+    private baseUrl = 'http://localhost:4200';
+    private loginEl = '#username';
 
-  async naviagteToLogin(): Promise<void> {
-    await this.navigateToUrl(this.baseUrl);
-  }
+    async navigateToLogin(): Promise<void> {
+        await this.navigateToUrl(this.baseUrl);
+    }
 
-  async isAuthHomePageDisplayed(): Promise<boolean> {
-    return (
-      (await this.isElementVisible(this.homePageEl)) &&
-      (await this.isElementVisible(this.logoutEl))
-    );
-  }
+    async isAuthHomePageDisplayed(): Promise<boolean> {
+        return (
+            (await this.isElementVisible(this.loginEl))
+        );
+    }
 }
